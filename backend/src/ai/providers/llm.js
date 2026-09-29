@@ -8,7 +8,7 @@
 const { AIProvider } = require('./base');
 
 const SYSTEM_PROMPT = [
-  'You are the QueueLess operational assistant for a queue-management system.',
+  'You are the LineFlow operational assistant for a flow-management system.',
   'Answer ONLY using the JSON CONTEXT provided. Treat it as the single source of truth.',
   'If the answer is not present in the context, clearly state that the required data is unavailable.',
   'Never invent, estimate, or assume numbers that are not in the context.',

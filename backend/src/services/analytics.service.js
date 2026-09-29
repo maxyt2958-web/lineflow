@@ -25,12 +25,12 @@ const CSV_COLUMNS = [
 ];
 
 // Cache the org name (from RTDB config) so each event write doesn't re-read it.
-let _orgNameCache = { name: 'QueueLess', ts: 0 };
+let _orgNameCache = { name: 'LineFlow', ts: 0 };
 async function getOrgName() {
   if (Date.now() - _orgNameCache.ts < 60_000) return _orgNameCache.name;
   try {
     const snap = await refs.appConfig().once('value');
-    _orgNameCache = { name: (snap.val() && snap.val().orgName) || 'QueueLess', ts: Date.now() };
+    _orgNameCache = { name: (snap.val() && snap.val().orgName) || 'LineFlow', ts: Date.now() };
   } catch { /* keep previous value */ }
   return _orgNameCache.name;
 }

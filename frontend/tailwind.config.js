@@ -8,17 +8,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Light (default)
-        paper:    '#F7F3EC',
-        cream:    '#FBF7F0',
-        ink:      '#171615',
-        graphite: '#5C5854',
-        ash:      '#A9A39B',
-        rule:     '#E5DFD3',
+        // Light (clean white palette)
+        paper:    '#FFFFFF',
+        cream:    '#FFFFFF',
+        ink:      '#0F172A',
+        graphite: '#4B5563',
+        ash:      '#9CA3AF',
+        rule:     '#E5E7EB',
         accent:   '#C84B26',
         'accent-deep': '#9F3A1B',
-        success:  '#3F6F4F',
-        warn:     '#B8881C',
+        success:  '#15803D',
+        warn:     '#B45309',
       },
       fontFamily: {
         // Display serif for numbers - Instrument Serif is free via Google Fonts

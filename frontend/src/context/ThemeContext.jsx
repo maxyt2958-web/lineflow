@@ -1,18 +1,24 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeContext = createContext(null);
-const KEY = 'queueless.theme';
+const KEY = 'lineflow.theme';
 
 export function ThemeProvider({ children }) {
   const [dark, setDark] = useState(() => {
-    const saved = localStorage.getItem(KEY);
-    if (saved) return saved === 'dark';
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    try {
+      localStorage.removeItem('queueless.theme');
+      const saved = localStorage.getItem(KEY);
+      return saved === 'dark';
+    } catch {
+      return false;
+    }
   });
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark);
-    localStorage.setItem(KEY, dark ? 'dark' : 'light');
+    try {
+      localStorage.setItem(KEY, dark ? 'dark' : 'light');
+    } catch {}
   }, [dark]);
 
   return (

@@ -1,7 +1,7 @@
 {
-  "name": "queueless-backend",
+  "name": "lineflow-backend",
   "version": "1.6.0",
-  "description": "QueueLess — REST API server for Smart Token & Queue Management System.",
+  "description": "LineFlow — REST API server for Smart Flow & Queue Management System.",
   "main": "src/server.js",
   "type": "commonjs",
   "engines": {

@@ -2,13 +2,13 @@ import { getCustomQueues } from './queueRegistry.js';
 
 export const INDUSTRY_PROFILES = {
   general: {
-    name: 'General Office',
+    name: 'Campus Services',
     services: [
-      { id: 'general',      title: 'General Inquiry',  desc: 'Reception, info, walk-in support' },
-      { id: 'consultation', title: 'Consultation',      desc: 'Advisor or specialist visit' },
-      { id: 'transaction',  title: 'Transaction',       desc: 'Payment, deposit, account change' },
-      { id: 'billing',      title: 'Billing & Payments',desc: 'Invoices, refunds, billing queries' },
-      { id: 'support',      title: 'Help & Support',    desc: 'Complaints, follow-ups, assistance' },
+      { id: 'xerox_printing',   title: 'Xerox / Printing',  desc: 'Printing, photocopy, scanning & document services' },
+      { id: 'hello_idly',       title: 'Hello Idly',        desc: 'Breakfast, idly, dosa & hot snacks counter' },
+      { id: 'teachers_portal',  title: 'Teachers Portal',   desc: 'Faculty inquiries, appointments & academic submissions' },
+      { id: 'night_canteen',    title: 'Night Canteen',     desc: 'Late-night snacks, meals, noodles & beverages' },
+      { id: 'hostel_complains', title: 'Hostel Complains',  desc: 'Room maintenance, plumbing, electrical & hostel complaints' },
     ],
   },
   bank: {

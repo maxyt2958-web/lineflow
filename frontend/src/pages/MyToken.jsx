@@ -42,7 +42,7 @@ function playAlertSound() {
 }
 
 function fireConfetti() {
-  confetti({ particleCount: 120, spread: 80, origin: { y: 0.55 }, colors: ['#C84B26', '#3F6F4F', '#B8881C', '#F7F3EC'] });
+  confetti({ particleCount: 120, spread: 80, origin: { y: 0.55 }, colors: ['#C84B26', '#15803D', '#B45309', '#FFFFFF'] });
 }
 
 function formatWait(seconds) {
@@ -63,8 +63,8 @@ function PrintableToken({ token, serviceLabel, orgName, location }) {
       <div style={{ width: '340px', border: '1.5px solid #1A1714', display: 'flex', flexDirection: 'column' }}>
         <div style={{ background: '#1A1714', padding: '14px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
           <div>
-            <div style={{ color: '#F7F3EC', fontSize: '11px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: '600' }}>
-              {orgName || 'QueueLess'}
+            <div style={{ color: '#FFFFFF', fontSize: '11px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: '600' }}>
+              {orgName || 'LineFlow'}
             </div>
             {location && (
               <div style={{ color: '#A89E94', fontSize: '9px', marginTop: '3px' }}>{location}</div>
@@ -82,7 +82,7 @@ function PrintableToken({ token, serviceLabel, orgName, location }) {
           <div style={{ fontSize: '8px', letterSpacing: '0.18em', textTransform: 'uppercase', color: '#8A8278', marginBottom: '3px' }}>Issued</div>
           <div style={{ fontSize: '11px', color: '#4A4542' }}>{issuedAt}</div>
         </div>
-        <div style={{ padding: '12px 24px', background: '#F7F3EC' }}>
+        <div style={{ padding: '12px 24px', background: '#FAFAFA', borderTop: '1px solid #E5E7EB' }}>
           <div style={{ fontSize: '8px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#8A8278', marginBottom: '4px' }}>Track your position</div>
           <div style={{ fontSize: '9px', color: '#5C5854', fontFamily: 'monospace', wordBreak: 'break-all' }}>{shortUrl}</div>
         </div>

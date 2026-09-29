@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  html, body {
+    background-color: #FFFFFF;
+    color: #0F172A;
     font-feature-settings: 'cv11', 'ss01', 'tnum';
     -webkit-font-smoothing: antialiased;
   }
@@ -31,16 +33,16 @@
   }
 }
 
-/* ── dark mode semantic remappings ─────────────────────────────────────── */
-.dark .bg-paper   { background-color: #1C1A18 !important; }
-.dark .bg-cream   { background-color: #252220 !important; }
-.dark .bg-ink     { background-color: #F0EBE3 !important; }
-.dark .text-ink   { color: #F0EBE3 !important; }
-.dark .text-graphite { color: #A09890 !important; }
-.dark .text-ash   { color: #5C5854 !important; }
-.dark .border-rule { border-color: #353028 !important; }
-.dark .divide-rule > * + * { border-color: #353028 !important; }
-.dark .bg-rule    { background-color: #353028 !important; }
+/* ── white palette consistency across all themes ──────────────────────── */
+.dark .bg-paper   { background-color: #FFFFFF !important; }
+.dark .bg-cream   { background-color: #FFFFFF !important; }
+.dark .bg-ink     { background-color: #0F172A !important; }
+.dark .text-ink   { color: #0F172A !important; }
+.dark .text-graphite { color: #4B5563 !important; }
+.dark .text-ash   { color: #9CA3AF !important; }
+.dark .border-rule { border-color: #E5E7EB !important; }
+.dark .divide-rule > * + * { border-color: #E5E7EB !important; }
+.dark .bg-rule    { background-color: #E5E7EB !important; }
 
 /* In dark mode bg-ink flips to cream (#F0EBE3) — ALL text on it must be dark.
    This covers btn-primary, selected service cards, table headers, etc. */
@@ -70,7 +72,7 @@
 }
 
 /* dark body & html bg */
-.dark body, .dark html { background-color: #1C1A18; color: #F0EBE3; }
+.dark body, .dark html { background-color: #FFFFFF; color: #0F172A; }
 
 @layer components {
   .hairline {

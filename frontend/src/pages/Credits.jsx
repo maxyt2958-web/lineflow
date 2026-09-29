@@ -14,7 +14,7 @@ const MODULES = [
 
 function fireConfetti() {
   const end = Date.now() + 600;
-  const colors = ['#E2603F', '#1A1A1A', '#F7F3EC'];
+  const colors = ['#E2603F', '#0F172A', '#FFFFFF'];
   (function frame() {
     confetti({ particleCount: 4, angle: 60, spread: 55, origin: { x: 0 }, colors });
     confetti({ particleCount: 4, angle: 120, spread: 55, origin: { x: 1 }, colors });
@@ -40,13 +40,13 @@ export default function Credits() {
         ? { x: (burstRef.current.getBoundingClientRect().left + burstRef.current.offsetWidth / 2) / window.innerWidth,
             y: (burstRef.current.getBoundingClientRect().top + burstRef.current.offsetHeight / 2) / window.innerHeight }
         : { y: 0.6 },
-      colors: ['#E2603F', '#1A1A1A', '#F7F3EC'],
+      colors: ['#E2603F', '#0F172A', '#FFFFFF'],
     });
   };
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
-      <div className="label mb-3">QueueLess · Credits</div>
+      <div className="label mb-3">LineFlow · Credits</div>
       <h1 className="font-display text-5xl sm:text-7xl tracking-tightest leading-[0.92]">
         Developed by<br />
         <span className="text-accent">Mohammad Sufiyan Aasim </span>
@@ -60,7 +60,7 @@ export default function Credits() {
         </a>
       </h1>
       <p className="mt-5 text-graphite max-w-xl">
-        QueueLess — a cloud-native smart token & queue management system. Designed,
+        LineFlow — a cloud-native smart token & queue management system. Designed,
         engineered, and shipped end-to-end: architecture, backend, realtime cloud
         infrastructure, frontend, analytics, and delivery pipeline.
       </p>

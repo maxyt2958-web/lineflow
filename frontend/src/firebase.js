@@ -6,7 +6,7 @@
  * but not WRITE (writes go through our backend, which uses Admin SDK).
  */
 import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, onValue, off, set, onDisconnect } from 'firebase/database';
+import { getDatabase, ref, onValue, off, set, onDisconnect, connectDatabaseEmulator } from 'firebase/database';
 import { getAnalytics, isSupported as analyticsIsSupported } from "firebase/analytics";
 
 const firebaseConfig = {
@@ -22,6 +22,10 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+
+if (import.meta.env.VITE_USE_FIREBASE_EMULATOR === 'true' || (import.meta.env.VITE_FIREBASE_DATABASE_URL && import.meta.env.VITE_FIREBASE_DATABASE_URL.includes('127.0.0.1'))) {
+  connectDatabaseEmulator(db, '127.0.0.1', 9000);
+}
 
 // Analytics is browser-only and requires a valid measurementId. Initialize it
 // lazily and defensively so a missing config value or unsupported environment

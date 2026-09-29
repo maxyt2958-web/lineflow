@@ -94,7 +94,7 @@ export default function Layout({ children }) {
           <Link to={logoTarget} className="flex items-center shrink-0 group">
             <img
               src={logoSrc}
-              alt="QueueLess"
+              alt="LineFlow"
               className="h-6 sm:h-7 w-auto transition-opacity duration-200"
             />
           </Link>
@@ -427,7 +427,7 @@ export default function Layout({ children }) {
       <footer className="border-t border-rule mt-12 print:hidden">
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 xl:px-10 py-4 flex flex-col sm:flex-row gap-2 sm:gap-6 items-start sm:items-center justify-between text-xs text-graphite">
           <div className="flex items-center gap-2 min-w-0">
-            {cfg?.orgName && cfg.orgName !== 'QueueLess' ? (
+            {cfg?.orgName && cfg.orgName !== 'LineFlow' ? (
               <span
                 className="flex items-center gap-1.5 min-w-0 truncate"
                 title={cfg.location ? `${cfg.orgName} · ${cfg.location}` : cfg.orgName}
@@ -442,7 +442,7 @@ export default function Layout({ children }) {
                 )}
               </span>
             ) : (
-              <span className="font-medium text-ink">QueueLess</span>
+              <span className="font-medium text-ink">LineFlow</span>
             )}
           </div>
           <span className="flex items-center gap-3">

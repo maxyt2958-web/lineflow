@@ -9,7 +9,7 @@ const appointmentMergeService = require('./services/appointmentMerge.service');
 const { registerSubscribers } = require('./events');
 
 async function main() {
-  console.log(`[boot] Starting QueueLess backend in ${config.nodeEnv} mode...`);
+  console.log(`[boot] Starting LineFlow backend in ${config.nodeEnv} mode...`);
 
   registerSubscribers();
   await authService.bootstrapAdmin();

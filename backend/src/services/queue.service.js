@@ -40,7 +40,7 @@ async function ensureInitialized() {
   }
   const cfgSnap = await refs.appConfig().once('value');
   if (!cfgSnap.exists()) {
-    await refs.appConfig().set({ industry: 'general', orgName: 'QueueLess' });
+    await refs.appConfig().set({ industry: 'general', orgName: 'LineFlow' });
   }
 }
 

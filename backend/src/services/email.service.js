@@ -24,6 +24,11 @@ async function sendTokenEmail({ to, token, trackingUrl }) {
   if (!t) return;
 
   const serviceLabel = {
+    xerox_printing: 'Xerox / Printing',
+    hello_idly: 'Hello Idly',
+    teachers_portal: 'Teachers Portal',
+    night_canteen: 'Night Canteen',
+    hostel_complains: 'Hostel Complains',
     general: 'General Inquiry',
     consultation: 'Consultation',
     transaction: 'Transaction',
@@ -33,11 +38,11 @@ async function sendTokenEmail({ to, token, trackingUrl }) {
   const issuedAt = new Date(token.issuedAt).toLocaleString();
 
   await t.sendMail({
-    from: `"QueueLess" <${config.email.from}>`,
+    from: `"LineFlow" <${config.email.from}>`,
     to,
     subject: `Your token is #${tokenNum} — ${serviceLabel}`,
     text: [
-      `Your QueueLess Token`,
+      `Your LineFlow Token`,
       ``,
       `Token Number : #${tokenNum}`,
       `Service      : ${serviceLabel}`,
@@ -55,14 +60,14 @@ async function sendTokenEmail({ to, token, trackingUrl }) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body style="margin:0;padding:0;background:#F7F3EC;font-family:'Georgia',serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#F7F3EC;padding:40px 0;">
+<body style="margin:0;padding:0;background:#FFFFFF;font-family:'Georgia',serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#FFFFFF;padding:40px 0;">
     <tr><td align="center">
-      <table width="560" cellpadding="0" cellspacing="0" style="background:#FDFAF5;border:1px solid #E0D9CE;max-width:560px;width:100%;">
+      <table width="560" cellpadding="0" cellspacing="0" style="background:#FAFAFA;border:1px solid #E5E7EB;max-width:560px;width:100%;">
 
         <tr>
-          <td style="padding:32px 40px 24px;border-bottom:1px solid #E0D9CE;">
-            <span style="font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#8A8278;">QueueLess</span>
+          <td style="padding:32px 40px 24px;border-bottom:1px solid #E5E7EB;">
+            <span style="font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#6B7280;">LineFlow</span>
           </td>
         </tr>
 

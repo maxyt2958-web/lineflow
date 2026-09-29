@@ -36,7 +36,7 @@ export default function AdminLogin() {
         Sign in to manage<br/>the queue.
       </h1>
       <p className="mt-4 text-graphite text-sm">
-        Admin-only — credentials are issued by the QueueLess team.
+        Admin-only — credentials are issued by the LineFlow team.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-12 space-y-5">

@@ -32,5 +32,5 @@ export function useAppConfig() {
     return () => window.removeEventListener('queueless:config', onUpdate);
   }, []);
 
-  return cfg || { industry: 'general', orgName: 'QueueLess' };
+  return cfg || { industry: 'general', orgName: 'LineFlow' };
 }

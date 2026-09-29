@@ -5,4 +5,4 @@ export const RELEASE = Object.freeze({
 });
 
 export const RELEASE_BADGE = `v${RELEASE.version} “${RELEASE.codename}”`;
-export const RELEASE_TITLE = `QueueLess v${RELEASE.version} "${RELEASE.codename}" — ${RELEASE.milestone}`;
+export const RELEASE_TITLE = `LineFlow v${RELEASE.version} "${RELEASE.codename}" — ${RELEASE.milestone}`;

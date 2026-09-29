@@ -62,7 +62,7 @@ export default function ShareView() {
   return (
     <div className="max-w-2xl mx-auto px-6 py-12">
       <div className="flex items-center justify-between mb-6 print:hidden">
-        <div className="label">QueueLess · Shared</div>
+        <div className="label">LineFlow · Shared</div>
         <button onClick={() => window.print()} className="btn-secondary text-sm">Print</button>
       </div>
       <h1 className="font-display text-4xl tracking-tightest leading-none mb-2">{share.title}</h1>

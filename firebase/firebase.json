@@ -10,5 +10,16 @@
       "ignore": ["node_modules", ".git", "*.log"],
       "runtime": "nodejs20"
     }
-  ]
+  ],
+  "emulators": {
+    "database": {
+      "port": 9000,
+      "host": "0.0.0.0"
+    },
+    "ui": {
+      "enabled": true,
+      "port": 4001,
+      "host": "0.0.0.0"
+    }
+  }
 }

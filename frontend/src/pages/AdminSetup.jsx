@@ -30,7 +30,7 @@ export default function AdminSetup() {
   useEffect(() => {
     if (!cfg) return;
     if (cfg.industry) setIndustry(cfg.industry);
-    if (cfg.orgName && cfg.orgName !== 'QueueLess') setOrgName(cfg.orgName);
+    if (cfg.orgName && cfg.orgName !== 'LineFlow') setOrgName(cfg.orgName);
     if (cfg.location) { setLocation(cfg.location); setOtherCity(!CITIES.includes(cfg.location)); }
     if (cfg.displayMessage) setDisplayMessage(cfg.displayMessage);
     if (cfg.slaMinutes) setSlaMinutes(String(cfg.slaMinutes));
@@ -69,7 +69,7 @@ export default function AdminSetup() {
     }
   };
 
-  const isEditing = cfg?.orgName && cfg.orgName !== 'QueueLess';
+  const isEditing = cfg?.orgName && cfg.orgName !== 'LineFlow';
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 xl:px-10 py-12">
@@ -133,7 +133,7 @@ export default function AdminSetup() {
                   : 'border-rule bg-cream hover:border-ink'
               }`}
             >
-              <div className="label" style={industry === key ? { color: '#F7F3EC99' } : {}}>
+              <div className="label" style={industry === key ? { color: '#FFFFFF99' } : {}}>
                 {industry === key ? 'Selected' : 'Profile'}
               </div>
               <div className="mt-3 font-display text-2xl leading-tight">{profile.name}</div>

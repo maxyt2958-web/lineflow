@@ -87,7 +87,7 @@ export default function AssistantDock() {
             <div className="flex items-center gap-2">
               <span className="text-base">✦</span>
               <div>
-                <div className="text-sm font-medium leading-none">QueueLess Assistant</div>
+                <div className="text-sm font-medium leading-none">LineFlow Assistant</div>
                 <div className="text-[10px] opacity-70 mt-0.5">Answers from live queue data only</div>
               </div>
             </div>

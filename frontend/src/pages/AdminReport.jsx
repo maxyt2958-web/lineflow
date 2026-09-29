@@ -106,15 +106,15 @@ export default function AdminReport() {
         {/* Dark stripe — matches token header */}
         <div style={{ background: '#1A1714', padding: '14px 28px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
           <div>
-            <div style={{ color: '#F7F3EC', fontSize: '12px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: '600' }}>
-              {cfg.orgName && cfg.orgName !== 'QueueLess' ? cfg.orgName : 'QueueLess'}
+            <div style={{ color: '#FFFFFF', fontSize: '12px', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: '600' }}>
+              {cfg.orgName && cfg.orgName !== 'LineFlow' ? cfg.orgName : 'LineFlow'}
             </div>
             {cfg.location && (
-              <div style={{ color: '#A89E94', fontSize: '10px', marginTop: '4px' }}>{cfg.location}</div>
+              <div style={{ color: '#9CA3AF', fontSize: '10px', marginTop: '4px' }}>{cfg.location}</div>
             )}
           </div>
           <div style={{ textAlign: 'right' }}>
-            <div style={{ color: '#F7F3EC', fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Detailed Report</div>
+            <div style={{ color: '#FFFFFF', fontSize: '11px', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Detailed Report</div>
             <div style={{ color: '#A89E94', fontSize: '9px', marginTop: '4px' }}>
               {new Date().toLocaleDateString()} · {new Date().toLocaleTimeString()}
             </div>
@@ -276,9 +276,9 @@ export default function AdminReport() {
       )}
 
       {/* Print-only footer */}
-      <div className="hidden print:block mt-12 pt-4" style={{ borderTop: '1px solid #E4DDD3' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '9px', color: '#8A8278', fontFamily: '"Georgia", serif', letterSpacing: '0.08em' }}>
-          <span>{cfg.orgName && cfg.orgName !== 'QueueLess' ? cfg.orgName : 'QueueLess'}{cfg.location ? ` · ${cfg.location}` : ''}</span>
+      <div className="hidden print:block mt-12 pt-4" style={{ borderTop: '1px solid #E5E7EB' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '9px', color: '#6B7280', fontFamily: '"Georgia", serif', letterSpacing: '0.08em' }}>
+          <span>{cfg.orgName && cfg.orgName !== 'LineFlow' ? cfg.orgName : 'LineFlow'}{cfg.location ? ` · ${cfg.location}` : ''}</span>
           <span style={{ fontFamily: 'monospace' }}>{RELEASE_BADGE} · cloud-native token qms</span>
         </div>
       </div>

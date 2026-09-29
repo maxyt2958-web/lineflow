@@ -105,7 +105,7 @@ async function getAutoModeStatus(req, res) {
 
 async function getAppConfig(req, res) {
   const snap = await refs.appConfig().once('value');
-  res.json(snap.val() || { industry: 'general', orgName: 'QueueLess' });
+  res.json(snap.val() || { industry: 'general', orgName: 'LineFlow' });
 }
 
 const VALID_INDUSTRIES = ['general', 'bank', 'medical', 'restaurant'];

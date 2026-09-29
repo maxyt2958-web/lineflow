@@ -23,7 +23,7 @@ router.get('/config', asyncHandler(async (req, res) => {
     queueAdminService.getActiveQueues().catch(() => []),
     analyticsService.getTrafficStats().catch(() => ({})),
   ]);
-  const cfg = snap.val() || { industry: 'general', orgName: 'QueueLess' };
+  const cfg = snap.val() || { industry: 'general', orgName: 'LineFlow' };
   // Live average service time (observed waits when available, configured
   // default otherwise) so customer-facing wait previews are never static.
   const avgServiceSeconds = Math.round(
@@ -66,7 +66,7 @@ router.post('/appointments', asyncHandler(async (req, res) => {
 }));
 
 router.get('/health', (req, res) => {
-  res.json({ status: 'ok', service: 'queueless-backend', timestamp: new Date().toISOString() });
+  res.json({ status: 'ok', service: 'lineflow-backend', timestamp: new Date().toISOString() });
 });
 
 module.exports = router;

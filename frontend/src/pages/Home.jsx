@@ -16,8 +16,8 @@ export default function Home() {
   useEffect(() => {
     const takeUrl = `${window.location.origin}/take`;
     // QR foreground adapts to current theme
-    const qrDark = dark ? '#F0EBE3' : '#171615';
-    const qrLight = dark ? '#1C1A18' : '#FBF7F0';
+    const qrDark = dark ? '#F0EBE3' : '#0F172A';
+    const qrLight = dark ? '#1C1A18' : '#FFFFFF';
     QRCode.toDataURL(takeUrl, { width: 160, margin: 1, color: { dark: qrDark, light: qrLight } })
       .then(setQrDataUrl)
       .catch(() => {});
@@ -35,7 +35,7 @@ export default function Home() {
         <div className="lg:col-span-6">
           <img
             src={dark ? '/svg/queueless-wordmark-dark.svg' : '/svg/queueless-lockup.svg'}
-            alt="QueueLess - Smart Queue Management"
+            alt="LineFlow - Smart Queue Management"
             className="h-12 sm:h-16 w-auto mb-6"
           />
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl tracking-tightest leading-[0.95]">
@@ -44,7 +44,7 @@ export default function Home() {
             your position live.
           </h1>
           <p className="mt-6 text-base text-graphite max-w-lg leading-relaxed">
-            QueueLess replaces paper slips and crowded waiting rooms with a real-time, browser-based queue.
+            LineFlow replaces paper slips and crowded waiting rooms with a real-time, browser-based queue.
             Pull a token from anywhere — a phone in a parking lot, a laptop across town — and arrive at the
             counter only when the screen says it's your turn.
           </p>

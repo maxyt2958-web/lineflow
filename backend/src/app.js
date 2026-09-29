@@ -52,7 +52,7 @@ function buildApp() {
 
   app.get('/', (req, res) => {
     res.json({
-      message: 'Welcome to the QueueLess API server.',
+      message: 'Welcome to the LineFlow API server.',
       version,
       status: 'active',
     });

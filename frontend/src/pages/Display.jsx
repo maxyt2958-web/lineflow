@@ -36,38 +36,38 @@ export default function Display() {
   const priorityCalled = tokenList.find(t => t.status === 'called' && t.priority === 'priority');
 
   return (
-    <div className="min-h-screen bg-ink text-paper flex flex-col select-none">
+    <div className="min-h-screen bg-paper text-ink flex flex-col select-none">
       {/* Announcement banner */}
       {announcement?.message && (
-        <div className="px-8 py-3 bg-warn text-ink text-sm font-medium text-center tracking-wide">
+        <div className="px-8 py-3 bg-warn text-white text-sm font-medium text-center tracking-wide">
           {announcement.message}
         </div>
       )}
 
       {/* Display message (permanent welcome message from admin settings) */}
       {cfg.displayMessage && (
-        <div className="px-8 py-2.5 border-b border-teal-500/30 bg-teal-900/20 text-teal-200 text-sm text-center tracking-wide">
+        <div className="px-8 py-2.5 border-b border-teal-500/30 bg-teal-50 text-teal-800 text-sm text-center tracking-wide">
           {cfg.displayMessage}
         </div>
       )}
 
       {/* Top bar */}
-      <div className="flex items-center justify-between px-8 py-5 border-b border-paper/10">
+      <div className="flex items-center justify-between px-8 py-5 border-b border-rule bg-white">
         <div>
-          <span className="text-xs tracking-[0.18em] uppercase text-paper/50">{cfg.orgName}</span>
-          <span className="ml-3 text-xs text-paper/30">· Queue Display</span>
+          <span className="text-xs tracking-[0.18em] uppercase text-graphite">{cfg.orgName}</span>
+          <span className="ml-3 text-xs text-ash">· Queue Display</span>
         </div>
         <div className="flex items-center gap-4">
           {isPaused && (
-            <span className="text-xs px-3 py-1 border border-warn/50 text-warn">Queue paused</span>
+            <span className="text-xs px-3 py-1 border border-warn text-warn">Queue paused</span>
           )}
           {priorityWaiting.length > 0 && (
-            <span className="text-xs px-3 py-1 border border-warn/50 text-warn flex items-center gap-1.5">
+            <span className="text-xs px-3 py-1 border border-warn text-warn flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-warn animate-pulse" />
               {priorityWaiting.length} priority waiting
             </span>
           )}
-          <span className="font-mono text-paper/50 text-sm">{time.toLocaleTimeString()}</span>
+          <span className="font-mono text-graphite text-sm">{time.toLocaleTimeString()}</span>
         </div>
       </div>
 
@@ -95,7 +95,7 @@ export default function Display() {
       )}
 
       {/* Service cards */}
-      <div className="flex-1 flex items-center justify-center p-8">
+      <div className="flex-1 flex items-center justify-center p-8 bg-paper">
         <div className={`grid gap-6 w-full max-w-6xl ${
           services.length === 1 ? 'grid-cols-1 max-w-sm' :
           services.length === 2 ? 'grid-cols-2' :
@@ -110,15 +110,15 @@ export default function Display() {
             return (
               <div
                 key={s.id}
-                className={`border p-6 flex flex-col transition-all duration-500 ${
-                  called ? 'border-accent bg-accent/10' : 'border-paper/10 bg-paper/5'
-                } ${isFlashing ? 'scale-105' : ''}`}
+                className={`border p-6 flex flex-col transition-all duration-500 bg-white ${
+                  called ? 'border-accent bg-accent/5' : 'border-rule'
+                } ${isFlashing ? 'scale-105 shadow-md' : 'shadow-sm'}`}
               >
-                <div className="text-xs tracking-[0.15em] uppercase text-paper/50 mb-4">{s.title}</div>
+                <div className="text-xs tracking-[0.15em] uppercase text-graphite mb-4">{s.title}</div>
 
                 <div
                   className={`font-display num leading-none tracking-tightest flex-1 flex items-center transition-colors ${
-                    called ? 'text-accent' : 'text-paper/20'
+                    called ? 'text-accent' : 'text-ash/40'
                   }`}
                   style={{ fontSize: 'clamp(4rem, 10vw, 10rem)' }}
                 >
@@ -132,10 +132,10 @@ export default function Display() {
                 )}
 
                 <div className="mt-4 flex items-center justify-between text-xs">
-                  <span className={called ? 'text-accent font-medium' : 'text-paper/30'}>
+                  <span className={called ? 'text-accent font-medium' : 'text-ash'}>
                     {called ? 'Now serving' : 'No one called'}
                   </span>
-                  <span className="text-paper/40">{waiting.length} waiting</span>
+                  <span className="text-graphite">{waiting.length} waiting</span>
                 </div>
               </div>
             );
@@ -144,7 +144,7 @@ export default function Display() {
       </div>
 
       {/* Bottom ticker */}
-      <div className="px-8 py-4 border-t border-paper/10 flex items-center justify-between text-xs text-paper/30">
+      <div className="px-8 py-4 border-t border-rule bg-white flex items-center justify-between text-xs text-graphite">
         <span>Scan QR on your device or ask staff for your token number</span>
         <span className="flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
